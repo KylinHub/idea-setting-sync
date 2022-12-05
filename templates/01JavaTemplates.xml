@@ -1,0 +1,71 @@
+<templateSet group="01JavaTemplates">
+  <template name="/***" value="/**&#10; * @author cml&#10; */" shortcut="ENTER" description="类注释" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="log" value="private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger($ClassName$.class);" description="日志对象" toReformat="false" toShortenFQNames="true">
+    <variable name="ClassName" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="pd" value="@org.springframework.web.bind.annotation.PostMapping(&quot;/$PostMapping$&quot;)&#10;@io.swagger.annotations.ApiOperation(value = &quot;$MethodDesc$&quot;)&#10;public ResultModel&lt;$ReturnClass$&gt; $MethodName$(@org.springframework.web.bind.annotation.RequestBody @javax.validation.Valid $DtoClass$ dto) {&#10;    $VoClass$$vo$$equals$$Service$.$ServiceMethod$$END$(dto);&#10;    return ResultModel.success($vo$);&#10;}" description="post接口" toReformat="false" toShortenFQNames="true">
+    <variable name="MethodDesc" expression="" defaultValue="&quot;接口说明&quot;" alwaysStopAt="true" />
+    <variable name="MethodName" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <variable name="ReturnClass" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="DtoClass" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="VoClass" expression="groovyScript(&quot;return '?'.equals(_1) ? '' : _1&quot;, ReturnClass)" defaultValue="" alwaysStopAt="false" />
+    <variable name="PostMapping" expression="lowercaseAndDash(MethodName)" defaultValue="" alwaysStopAt="true" />
+    <variable name="vo" expression="groovyScript(&quot;return '?'.equals(_1) ? '' : ' vo' &quot;, ReturnClass)" defaultValue="" alwaysStopAt="false" />
+    <variable name="equals" expression="groovyScript(&quot;return '?'.equals(_1) ? '' : ' = ' &quot;, ReturnClass)" defaultValue="" alwaysStopAt="false" />
+    <variable name="Service" expression="camelCase(regularExpression(className(), &quot;Controller&quot;, &quot;Service&quot;))" defaultValue="" alwaysStopAt="true" />
+    <variable name="ServiceMethod" expression="MethodName" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="src" value="@javax.annotation.Resource&#10;private $Interface$ $RecourceName$;" description="依赖属性" toReformat="false" toShortenFQNames="true">
+    <variable name="Interface" expression="regularExpression(className(), &quot;Controller&quot;, &quot;Service&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="RecourceName" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="api" value="@io.swagger.v3.oas.annotations.media.Schema(description = &quot;$Description$&quot;)&#10;private $Class$ $paramName$;$END$" description="POJO属性" toReformat="false" toShortenFQNames="true">
+    <variable name="paramName" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <variable name="Class" expression="" defaultValue="&quot;String&quot;" alwaysStopAt="true" />
+    <variable name="Description" expression="" defaultValue="&quot;Description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="djf" value="@com.fasterxml.jackson.annotation.JsonFormat(pattern = com.avocadocondo.core.constant.CommonConstant.$PATTERN$, timezone = com.avocadocondo.core.constant.CommonConstant.$TIMEZONE$)" description="日期json注解" toReformat="false" toShortenFQNames="true">
+    <variable name="PATTERN" expression="completeSmart()" defaultValue="&quot;DATE&quot;" alwaysStopAt="true" />
+    <variable name="TIMEZONE" expression="completeSmart()" defaultValue="&quot;TIMEZONE&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="apd" value="@io.swagger.annotations.ApiModelProperty(value = &quot;$Description$&quot;)&#10;@com.fasterxml.jackson.annotation.JsonFormat(pattern = com.avocadocondo.core.constant.CommonConstant.$PATTERN$, timezone = com.avocadocondo.core.constant.CommonConstant.$TIMEZONE$)&#10;private java.util.Date $paramName$;$END$" description="POJO属性" toReformat="false" toShortenFQNames="true">
+    <variable name="paramName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Description" expression="" defaultValue="&quot;Description&quot;" alwaysStopAt="true" />
+    <variable name="PATTERN" expression="completeSmart()" defaultValue="&quot;DATE&quot;" alwaysStopAt="true" />
+    <variable name="TIMEZONE" expression="completeSmart()" defaultValue="&quot;TIMEZONE&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="pp" value="@org.springframework.web.bind.annotation.PostMapping(&quot;/$PostMapping$&quot;)&#10;@io.swagger.annotations.ApiOperation(value = &quot;$MethodDesc$&quot;)&#10;public ResultModel&lt;List&lt;$VoClass$&gt;&gt; $MethodName$(@org.springframework.web.bind.annotation.RequestBody @javax.validation.Valid $DtoClass$ dto) {&#10;    List&lt;$VoClass$&gt; list = $Service$.$ServiceMethod$(dto);&#10;    long count = $Service$.$ServiceMethod$Count(dto);&#10;    return ResultModel.success(list).setPageNum(dto.getPageNum()).setPageSize(dto.getPageSize()).setTotal(count);&#10;}" description="post接口" toReformat="false" toShortenFQNames="true">
+    <variable name="MethodDesc" expression="" defaultValue="&quot;接口说明&quot;" alwaysStopAt="true" />
+    <variable name="MethodName" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <variable name="DtoClass" expression="annotated(&quot;lombok.Data&quot;)" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="VoClass" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="PostMapping" expression="lowercaseAndDash(MethodName)" defaultValue="" alwaysStopAt="true" />
+    <variable name="Service" expression="camelCase(regularExpression(className(), &quot;Controller&quot;, &quot;Service&quot;))" defaultValue="" alwaysStopAt="true" />
+    <variable name="ServiceMethod" expression="MethodName" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

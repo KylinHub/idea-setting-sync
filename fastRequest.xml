@@ -1,0 +1,478 @@
+<application>
+  <component name="fastRequest">
+    <option name="commonHeaderList">
+      <list>
+        <DataMapping>
+          <option name="type" value="Content-Type" />
+          <option name="value" value="text/plain" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="Content-Type" />
+          <option name="value" value="text/html" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="Content-Type" />
+          <option name="value" value="application/xml" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="Content-Type" />
+          <option name="value" value="application/javascript" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="Authorization" />
+          <option name="value" value="" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="Cookie" />
+          <option name="value" value="" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="User-Agent" />
+          <option name="value" value="" />
+        </DataMapping>
+      </list>
+    </option>
+    <option name="customDataMappingList">
+      <list>
+        <DataMapping>
+          <option name="type" value="cn.hutool.json.JSONObject" />
+          <option name="value" value="{}" />
+        </DataMapping>
+      </list>
+    </option>
+    <option name="dataList">
+      <list>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5000/biz" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/biz" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-biz" />
+        </NameGroup>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5001/admin" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/admin" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-admin" />
+        </NameGroup>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5003/job" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/job" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-job" />
+        </NameGroup>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5005/device" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/device" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-device" />
+        </NameGroup>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5008/oms-cus" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/oms-cus" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-oms-cus" />
+        </NameGroup>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5007/oms-opt" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/oms-opt" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-oms-opt" />
+        </NameGroup>
+        <NameGroup>
+          <option name="hostGroup">
+            <list>
+              <HostGroup>
+                <option name="env" value="dev" />
+                <option name="url" value="http://localhost:5009/oms-job" />
+              </HostGroup>
+              <HostGroup>
+                <option name="env" value="uat" />
+                <option name="url" value="https://service-uat.nyg8.com/oms-job" />
+              </HostGroup>
+            </list>
+          </option>
+          <option name="name" value="nyg8-ons-job" />
+        </NameGroup>
+      </list>
+    </option>
+    <option name="defaultDataMappingList">
+      <list>
+        <DataMapping>
+          <option name="type" value="byte" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Byte" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="short" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Short" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="int" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Integer" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="long" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Long" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="char" />
+          <option name="value" value="a" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Character" />
+          <option name="value" value="a" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="float" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Float" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="double" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Double" />
+          <option name="value" value="1" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="boolean" />
+          <option name="value" value="true" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.lang.Boolean" />
+          <option name="value" value="true" />
+        </DataMapping>
+        <DataMapping>
+          <option name="type" value="java.math.BigDecimal" />
+          <option name="value" value="1" />
+        </DataMapping>
+      </list>
+    </option>
+    <option name="domain" value="http://localhost:5007/oms-opt" />
+    <option name="enableEnv" value="dev" />
+    <option name="enableProject" value="nyg8-oms-opt" />
+    <option name="envList">
+      <list>
+        <option value="dev" />
+        <option value="uat" />
+      </list>
+    </option>
+    <option name="eual" value="true" />
+    <option name="headerGroupList">
+      <list>
+        <HeaderGroup>
+          <option name="projectName" value="nyg8-admin" />
+        </HeaderGroup>
+        <HeaderGroup>
+          <option name="projectName" value="nyg8-biz" />
+        </HeaderGroup>
+        <HeaderGroup>
+          <option name="envDataMap">
+            <map>
+              <entry key="dev">
+                <value>
+                  <list>
+                    <DataMapping>
+                      <option name="type" value="authority" />
+                      <option name="value" value="service-uat.nyg8.com" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="accept" />
+                      <option name="value" value="application/json, text/plain, */*" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="accept-language" />
+                      <option name="value" value="zh-CN,zh;q=0.9" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="cache-control" />
+                      <option name="value" value="no-cache" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="content-type" />
+                      <option name="value" value="application/json;charset=UTF-8" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-app-type" />
+                      <option name="value" value="OPT01" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-app-version" />
+                      <option name="value" value="0.1.0" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-auth" />
+                      <option name="value" value="2e7b2774707047869f6db807be0ca169" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="origin" />
+                      <option name="value" value="http://localhost:3000" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="pragma" />
+                      <option name="value" value="no-cache" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="referer" />
+                      <option name="value" value="http://localhost:3000/" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-ch-ua" />
+                      <option name="value" value="&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-ch-ua-mobile" />
+                      <option name="value" value="?0" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-ch-ua-platform" />
+                      <option name="value" value="&quot;macOS&quot;" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-fetch-dest" />
+                      <option name="value" value="empty" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-fetch-mode" />
+                      <option name="value" value="cors" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-fetch-site" />
+                      <option name="value" value="cross-site" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="user-agent" />
+                      <option name="value" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" />
+                    </DataMapping>
+                  </list>
+                </value>
+              </entry>
+              <entry key="uat">
+                <value>
+                  <list>
+                    <DataMapping>
+                      <option name="type" value="authority" />
+                      <option name="value" value="service-uat.nyg8.com" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="accept" />
+                      <option name="value" value="application/json, text/plain, */*" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="accept-language" />
+                      <option name="value" value="zh-CN,zh;q=0.9" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="cache-control" />
+                      <option name="value" value="no-cache" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="content-type" />
+                      <option name="value" value="application/json;charset=UTF-8" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-app-type" />
+                      <option name="value" value="OPT01" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-app-version" />
+                      <option name="value" value="0.1.0" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-auth" />
+                      <option name="value" value="2e7b2774707047869f6db807be0ca169" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="origin" />
+                      <option name="value" value="http://localhost:3000" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="pragma" />
+                      <option name="value" value="no-cache" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="referer" />
+                      <option name="value" value="http://localhost:3000/" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-ch-ua" />
+                      <option name="value" value="&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-ch-ua-mobile" />
+                      <option name="value" value="?0" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-ch-ua-platform" />
+                      <option name="value" value="&quot;macOS&quot;" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-fetch-dest" />
+                      <option name="value" value="empty" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-fetch-mode" />
+                      <option name="value" value="cors" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="sec-fetch-site" />
+                      <option name="value" value="cross-site" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="user-agent" />
+                      <option name="value" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" />
+                    </DataMapping>
+                  </list>
+                </value>
+              </entry>
+            </map>
+          </option>
+          <option name="projectName" value="nyg8-oms-opt" />
+        </HeaderGroup>
+        <HeaderGroup>
+          <option name="envDataMap">
+            <map>
+              <entry key="dev">
+                <value>
+                  <list />
+                </value>
+              </entry>
+              <entry key="uat">
+                <value>
+                  <list>
+                    <DataMapping>
+                      <option name="type" value="Accept" />
+                      <option name="value" value="application/json, text/plain, */*" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-app-type" />
+                      <option name="value" value="OPT02" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="Referer" />
+                      <option name="value" value="" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-auth" />
+                      <option name="value" value="0da8681ad113450494f2224ba353661e" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="nyg8-app-version" />
+                      <option name="value" value="0.0.1" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="User-Agent" />
+                      <option name="value" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 12_6_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.13.0 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36" />
+                    </DataMapping>
+                    <DataMapping>
+                      <option name="type" value="Content-Type" />
+                      <option name="value" value="application/json;charset=UTF-8" />
+                    </DataMapping>
+                  </list>
+                </value>
+              </entry>
+            </map>
+          </option>
+          <option name="projectName" value="nyg8-oms-cus" />
+        </HeaderGroup>
+      </list>
+    </option>
+    <option name="projectList">
+      <list>
+        <option value="nyg8-biz" />
+        <option value="nyg8-admin" />
+        <option value="nyg8-job" />
+        <option value="nyg8-device" />
+        <option value="nyg8-oms-cus" />
+        <option value="nyg8-oms-opt" />
+        <option value="nyg8-ons-job" />
+      </list>
+    </option>
+    <option name="randomStringLength" value="5" />
+    <option name="statisticsDate" value="2022-10-10 17:15:32" />
+    <option name="statisticsList">
+      <list>
+        <YearStatistics>
+          <option name="totalActionCount" value="130" />
+          <option name="totalFailCount" value="10" />
+          <option name="totalRocketCount" value="23" />
+          <option name="totalSuccessCount" value="25" />
+          <option name="year" value="2022" />
+        </YearStatistics>
+      </list>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,15 @@
+<application>
+  <component name="MyBatisCodeHelper">
+    <option name="profile">
+      <Profile>
+        <option name="checkUsage" value="3" />
+        <option name="disableCompleteWithJdbcType" value="true" />
+        <option name="generatedCount" value="1654843026224" />
+        <option name="ifUseNewMapping" value="19" />
+        <option name="lastD1" value="1657159736136" />
+        <option name="lastD2" value="1657159736140" />
+        <option name="valid" value="true" />
+      </Profile>
+    </option>
+  </component>
+</application>

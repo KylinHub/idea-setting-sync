@@ -1,0 +1,36 @@
+<templateSet group="03SqlTemplates">
+  <template name="lc" value="like concat('', #{$param$} '')$END$" description="like concat" toReformat="false" toShortenFQNames="true">
+    <variable name="param" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="lt" value="&amp;lt;" description="小于号" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="gt" value="&amp;gt;" description="大于号" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="lim" value="&lt;if test=&quot;pageable&quot;&gt;&#10;    limit #{offset},#{limit}&#10;&lt;/if&gt;" description="limit" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="oc" value="&lt;if test=&quot;$varName$ != null&quot;&gt;&#10;    $columnName$ &#10;    &lt;if test=&quot;$varName$&quot;&gt;&#10;        desc&#10;    &lt;/if&gt;,&#10;&lt;/if&gt;&#10;oc$END$" description="排序字段" toReformat="false" toShortenFQNames="true">
+    <variable name="columnName" expression="dbColumns()" defaultValue="&quot;columnName&quot;" alwaysStopAt="true" />
+    <variable name="varName" expression="concat(camelCase(columnName), &quot;Desc&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="count" value="select count(*)&#10;&lt;include refid=&quot;$sql$&quot;/&gt;" description="count" toReformat="false" toShortenFQNames="true">
+    <variable name="sql" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+</templateSet>

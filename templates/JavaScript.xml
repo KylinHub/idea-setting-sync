@@ -1,0 +1,19 @@
+<templateSet group="JavaScript">
+  <template name="importns" value="import * as $ITEM$ from &quot;$MODULE$&quot;;&#10;$END$" description="导入语句 - 从 ''a'' 导入 * as b" toReformat="true" toShortenFQNames="true">
+    <variable name="MODULE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ITEM" expression="jsSuggestImportedEntityName()" defaultValue="Namespace" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="importdefault" value="import $ITEM$ from &quot;$MODULE$&quot;;&#10;$END$" description="导入语句 - 从 ''a'' 导入 b" toReformat="true" toShortenFQNames="true">
+    <variable name="MODULE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ITEM" expression="jsSuggestImportedEntityName()" defaultValue="Namespace" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="exportall" value="export * from &quot;$MODULE$&quot;;&#10;$END$" description="导出语句 - 从 ''a'' 导出 *" toReformat="true" toShortenFQNames="true">
+    <variable name="MODULE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="us" value="&quot;use strict&quot;;&#10;$END$" description="插入 ''use strict'' 语句" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
+</templateSet>

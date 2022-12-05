@@ -1,0 +1,26 @@
+<templateSet group="02KtTemplates">
+  <template name="log" value="val log: org.slf4j.Logger = org.slf4j.LoggerFactory.getLogger(this.javaClass)" description="日志对象" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="src" value="@javax.annotation.Resource&#10;private lateinit var $Recource$" description="依赖属性" toReformat="false" toShortenFQNames="true">
+    <variable name="Recource" expression="kotlinSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="/**" value="/**&#10; * $1$      kotlinAnyVariable()&#10; * $2$      kotlinClassName()&#10; * $3$      kotlinFunctionName()&#10; * $4$      kotlinMainArguments()&#10; * $5$      kotlinPackageName()&#10; * $6$      kotlinSuggestVariableName()&#10; * $7$      kotlinVariable()&#10; * $8$      functionParameters()&#10; */" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="kotlinAnyVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="kotlinClassName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="kotlinMainArguments()" defaultValue="" alwaysStopAt="true" />
+    <variable name="5" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="6" expression="kotlinSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="7" expression="kotlinVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="8" expression="anonymousSuper()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

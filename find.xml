@@ -1,0 +1,39 @@
+<application>
+  <component name="FindSettings">
+    <option name="caseSensitive" value="true" />
+    <option name="customScope" value="所有位置" />
+    <option name="defaultScopeName" value="所有位置" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="SEARCH_SCOPE" value="所有位置" />
+    <mask>*Controller.*</mask>
+    <mask>*.css</mask>
+    <mask>*.html</mask>
+    <mask>*.jsp</mask>
+    <mask>*.properties</mask>
+    <mask>*.kt</mask>
+    <mask>*O.java</mask>
+    <mask>*Query*</mask>
+    <mask>*DTO.*</mask>
+    <mask>ebaas*Impl.kt</mask>
+    <mask>*Service.*</mask>
+    <mask>*Mapper.xml</mask>
+    <mask>*PropertyInfo*</mask>
+    <mask>*DTO*</mask>
+    <mask>*.java</mask>
+    <mask>*Impl.java</mask>
+    <mask>*Result.java</mask>
+    <mask>E*Mapper.java</mask>
+    <mask>*Controller.java</mask>
+    <mask>*.gradle</mask>
+    <mask>*Result.*</mask>
+    <mask>*Controller.kt</mask>
+    <mask>*Constant.*</mask>
+    <mask>*DTO.java</mask>
+    <mask>*.xml</mask>
+    <mask>*Mapper.java</mask>
+    <mask>*O.*</mask>
+    <mask>Opt*DTO.java</mask>
+    <mask>*Impl.*</mask>
+    <mask>*Impl.kt</mask>
+  </component>
+</application>
